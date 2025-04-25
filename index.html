@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixConvert Pro | Image Conversion Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Ad Top Bar -->
+    <div class="ad-bar top-ad">
+        <span>Advertisement</span>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <nav>
+                <div class="brand">
+                    <img src="logo.svg" alt="PixConvert Pro" class="logo">
+                    <span>PixConvert Pro</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#tools">Tools</a>
+                    <a href="#support">Support</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="converter-section">
+        <div class="container">
+            <div class="converter-card">
+                <!-- Left Ad Column -->
+                <div class="ad-column left-ad">
+                    <div class="ad-unit">Advertisement</div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="converter-content">
+                    <h2>Convert Images in Seconds</h2>
+                    <div class="upload-area" id="dropZone">
+                        <div class="upload-content">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h3>Drag & Drop Files Here</h3>
+                            <p>or click to browse (JPG, PNG, BMP, WEBP)</p>
+                            <button class="btn-primary" id="selectFileBtn">
+                                Select Files
+                            </button>
+                        </div>
+                        <input type="file" id="fileInput" hidden accept="image/*">
+                    </div>
+
+                    <div class="preview-wrapper">
+                        <div class="preview-card">
+                            <div class="preview-header">
+                                <h4>Preview</h4>
+                                <div class="file-info">
+                                    <span class="original-size">-</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="converted-size">-</span>
+                                </div>
+                            </div>
+                            <div class="image-preview" id="imagePreview"></div>
+                        </div>
+
+                        <div class="conversion-options">
+                            <div class="format-selector">
+                                <div class="option-group">
+                                    <label>Output Format:</label>
+                                    <div class="format-buttons">
+                                        <button class="format-btn active" data-format="pdf">
+                                            <i class="fas fa-file-pdf"></i> PDF
+                                        </button>
+                                        <button class="format-btn" data-format="jpg">
+                                            <i class="fas fa-file-image"></i> JPG
+                                        </button>
+                                        <button class="format-btn" data-format="png">
+                                            <i class="fas fa-file-image"></i> PNG
+                                        </button>
+                                        <button class="format-btn" data-format="webp">
+                                            <i class="fas fa-file-image"></i> WEBP
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="option-group">
+                                    <label>Quality Settings:</label>
+                                    <div class="quality-control">
+                                        <input type="range" id="qualitySlider" min="1" max="100" value="85">
+                                        <div class="quality-labels">
+                                            <span>Smaller File</span>
+                                            <span id="qualityValue">85%</span>
+                                            <span>Better Quality</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn-convert" id="convertBtn">
+                                <span class="btn-text">Start Conversion</span>
+                                <div class="spinner hidden"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Ad Column -->
+                <div class="ad-column right-ad">
+                    <div class="ad-unit">Advertisement</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="ad-bar bottom-ad">
+        <span>Advertisement</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
